@@ -1,0 +1,120 @@
+/* ### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%) */
+
+
+*{
+    box-sizing:border-box
+}
+:root {
+    --primary-color: #044529;
+    --secondary-color: hsl(158, 36%, 37%);
+    --background-color:hsl(30, 38%, 92%);
+    --card-color: #fff;
+}
+body {
+    background-color: var(--background-color);
+   
+}
+.card {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color: var(--card-color);
+    border-radius: 5%;
+    margin: 20px auto;
+    width:80%;
+}
+
+.card__text {
+    font-family: montserrat;
+    padding: 15px;
+    line-height: 1.5;
+    color:hsl(228, 12%, 48%);
+}
+header {
+    font-size: 10px;
+}
+h1 { 
+    font-family: fraunces;
+    line-height: 1;
+    color: black;
+    margin-top: 10px;
+}
+#price {  
+    text-decoration:none; 
+    color: var(--secondary-color);
+    font-family: fraunces;
+    font-size: 25px;
+    margin-bottom: 10px;
+    float: left;
+}    
+
+#discount {
+    margin-top: 20px;
+    text-indent: 15px;
+    font-size: 10px;
+    text-decoration:line-through;
+}
+button {
+    font-size: 11px;
+    text-indent: 20px;
+    border-radius: 5px;
+    border: 0px ;
+    color: #fff;
+    background-color: var(--secondary-color);
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 30px;
+    background-image: url(../images/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-size: 6%;
+}
+button:hover {
+    background-color: var(--primary-color);
+    transition-duration: 1s;
+}
+
+.attribution {
+    position: sticky;
+    margin: 30px;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media all and /*don´t forget this space*/(max-width:375px){
+    .card {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 10px;
+    }
+    .card__image {
+        content: url(../images/image-product-mobile.jpg);
+        width: 100%;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+    }
+    
+}
+@media all and (max-width: 1440px){
+    .card__image {
+        content: url(../images/image-product-desktop.jpg);
+        width: 100%;
+    }
+}
