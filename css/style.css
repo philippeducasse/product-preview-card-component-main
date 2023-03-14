@@ -28,14 +28,12 @@ body {
     align-items:center;
     justify-content: center;
     background-color: var(--card-color);
-    border-radius: 5%;
-    margin: 20px auto;
-    width:80%;
+    border-radius: 5%;    
 }
 
 .card__text {
     font-family: montserrat;
-    padding: 15px;
+    
     line-height: 1.5;
     color:hsl(228, 12%, 48%);
 }
@@ -58,7 +56,7 @@ h1 {
 }    
 
 #discount {
-    margin-top: 20px;
+    margin-top: 22px;
     text-indent: 15px;
     font-size: 10px;
     text-decoration:line-through;
@@ -94,15 +92,20 @@ a:hover {
     cursor: pointer;
 }
 
-@media all and /*don´t forget this space*/(max-width:375px){
+@media (max-width:375px){
     .card {
         flex-direction: column;
+        width:80%;
+        margin: 20px auto;
     }
     h1 {
         font-size: 20px;
     }
     p {
         font-size: 10px;
+    }
+    .card__text{
+        padding: 15px;
     }
     .card__image {
         content: url(../images/image-product-mobile.jpg);
@@ -113,8 +116,38 @@ a:hover {
     
 }
 @media  (min-width: 375px) and (max-width: 1440px){
+    .card {
+        width: 45%;
+        margin: 100px auto;
+        align-items:initial;
+        max-width:500px
+    }
+
+    .card__text {
+       padding: 0 28px;
+    }
+
     .card__image {
         content: url(../images/image-product-desktop.jpg);
-        width
+        width: 100%;
+        border-top-left-radius: 5%;
+        border-bottom-left-radius: 5%;
+        min-width: 230px;
+        
     }
+    h1 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 12px;
+        padding-right: 10px;
+    }
+    header{
+        margin-top:20px;
+        letter-spacing: 1px;
+    }
+    #discount {
+        font-size: 12px;
+    }
+
 }
